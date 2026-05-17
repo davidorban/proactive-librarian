@@ -1,0 +1,27 @@
+# Example configuration for proactive-librarian.
+#
+# Copy to `proactive-librarian.yaml` in the directory where you'll run `librarian`,
+# or pass `--config /path/to/this.yaml`.
+
+# ---- Required ----
+pdf_root: /path/to/your/pdfs
+
+# ---- Optional (with defaults) ----
+derived_dir: .derived            # relative to pdf_root
+collection_name: research        # backend collection key
+page_filename_padding: 4         # p0001.md vs p001.md vs p1.md
+
+# ---- Optional: subject taxonomy enforcement ----
+# When enabled, the first path component under pdf_root must match one of the
+# allowed_subjects. Ingest will fail loudly for unknown subjects.
+# See examples/taxonomy.example.yaml for a fuller example.
+taxonomy:
+  enabled: false
+  allowed_subjects: []
+  guide_reference: null
+
+# ---- Optional: backend overrides ----
+backend:
+  type: qmd                      # only QMD is implemented in v0.1.0
+  binary: qmd                    # binary name on PATH, or absolute path
+  timeout_seconds: 30

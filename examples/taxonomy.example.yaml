@@ -1,0 +1,29 @@
+# Example with taxonomy enforcement — for libraries that follow a
+# Subject/Geography/Document convention.
+#
+# When enabled, any PDF in a folder NOT listed in allowed_subjects causes
+# ingest to fail with an actionable error pointing back at this config.
+
+pdf_root: /path/to/your/research/library
+
+taxonomy:
+  enabled: true
+  allowed_subjects:
+    - "Artificial Intelligence"
+    - "Business Strategy"
+    - "Cryptocurrency"
+    - "Economics"
+    - "Energy"
+    - "Family Office"
+    - "Financial Services"
+    - "General Business"
+    - "Government Policy"
+    - "Healthcare"
+    - "Insurance"
+    - "Real Estate"
+    - "Technology"
+    - "Venture Capital"
+    # Special-purpose:
+    - "Uncategorised [Sorting Needed]"
+    - "ZZ Archived Structure"
+  guide_reference: "docs/research-classification-guide.md"
