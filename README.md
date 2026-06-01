@@ -1,8 +1,8 @@
 # proactive-librarian
 
+[![PyPI](https://img.shields.io/pypi/v/proactive-librarian.svg)](https://pypi.org/project/proactive-librarian/)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-v0.1.0-orange.svg)](CHANGELOG.md)
 
 > Turn a directory of PDFs into a searchable index and get back **page-accurate citations** like `Report.pdf:p.27`.
 
@@ -32,11 +32,13 @@ Built originally for one person's research-citation workflow, but it solves a ge
 
 ## Install
 
-Not yet on PyPI. Install from source:
+```bash
+pip install proactive-librarian
+```
+
+Or from source, for development:
 
 ```bash
-pip install git+https://github.com/davidorban/proactive-librarian
-# or, for local development:
 git clone https://github.com/davidorban/proactive-librarian
 cd proactive-librarian
 python -m venv .venv && source .venv/bin/activate
@@ -147,7 +149,6 @@ ruff check .    # lint
 ## Roadmap
 
 - Additional backends beyond QMD (the adapter boundary already exists).
-- Publish to PyPI for a plain `pip install proactive-librarian`.
 - Optional ambient/agent invocation surface (the explicit-CLI decision in ADR-003 is revisitable as adoption grows).
 - Richer query output formats (JSON, BibTeX-style citation export).
 
@@ -161,4 +162,4 @@ Issues and pull requests welcome. The codebase is small and well-tested — run 
 
 ## Status
 
-**v0.1.0** — in single-user production use; the API will stabilise as more backends and surfaces are added. The cache format and CLI are stable. See [CHANGELOG.md](CHANGELOG.md).
+**v0.1.0** — published on [PyPI](https://pypi.org/project/proactive-librarian/); in single-user production use. The API will stabilise as more backends and surfaces are added; the cache format and CLI are stable. See [CHANGELOG.md](CHANGELOG.md).
