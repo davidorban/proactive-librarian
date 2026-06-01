@@ -1,6 +1,6 @@
 # PyPI Publish — Memo for When the Time Is Right
 
-> **Status (2026-05-17):** Not yet published. This memo captures the full publishing playbook for the moment v0.1.x feels stable enough to ship. Re-read top-to-bottom before doing anything.
+> **Status (2026-06-01):** ✅ PUBLISHED — v0.1.0 is live on PyPI (https://pypi.org/project/proactive-librarian/), uploaded manually via `twine` (Path A) after a clean-venv install test. This memo remains the playbook for future releases. Path B (Trusted Publisher CI) is wired at `.github/workflows/publish.yml` but its one-time **pending-publisher registration on PyPI is still TODO** — do that before tagging the next release, or the tag-triggered run will fail.
 
 ---
 
@@ -182,6 +182,7 @@ GitHub Actions takes over from there. Total elapsed time: ~90 seconds.
 | Date | Decision | Rationale |
 |---|---|---|
 | 2026-05-17 | **Defer publish** | Want real-world usage data on the standalone before committing the name. The PyPI name reservation can also be done as a v0.0.1 placeholder if squatting becomes a concern. |
+| 2026-06-01 | **Publish v0.1.0 (Path A, manual `twine`)** | ~2 weeks of real use met the gate; needed a live `pip install` + PyPI presence to back a Codex-for-OSS application. Skipped TestPyPI (no TestPyPI account set up) but substituted a clean-venv install test of the built wheel. Name `proactive-librarian` now permanently claimed. |
 | _(future)_ | _(record decisions here as they happen)_ | |
 
 ---
